@@ -1,0 +1,15 @@
+E:\ProjectOOP\QLTracNghiem\bin\Debug\QLTracNghiem.exe.config
+E:\ProjectOOP\QLTracNghiem\bin\Debug\QLTracNghiem.exe
+E:\ProjectOOP\QLTracNghiem\bin\Debug\QLTracNghiem.pdb
+E:\ProjectOOP\QLTracNghiem\bin\Debug\EntityFramework.dll
+E:\ProjectOOP\QLTracNghiem\bin\Debug\EntityFramework.SqlServer.dll
+E:\ProjectOOP\QLTracNghiem\bin\Debug\EntityFramework.xml
+E:\ProjectOOP\QLTracNghiem\bin\Debug\EntityFramework.SqlServer.xml
+E:\ProjectOOP\QLTracNghiem\obj\Debug\QLTracNghiem.csproj.AssemblyReference.cache
+E:\ProjectOOP\QLTracNghiem\obj\Debug\QLTracNghiem.Properties.Resources.resources
+E:\ProjectOOP\QLTracNghiem\obj\Debug\QLTracNghiem.csproj.GenerateResource.cache
+E:\ProjectOOP\QLTracNghiem\obj\Debug\QLTracNghiem.csproj.CoreCompileInputs.cache
+E:\ProjectOOP\QLTracNghiem\obj\Debug\QLTracNghiem.csproj.CopyComplete
+E:\ProjectOOP\QLTracNghiem\obj\Debug\QLTracNghiem.exe
+E:\ProjectOOP\QLTracNghiem\obj\Debug\QLTracNghiem.pdb
+E:\ProjectOOP\QLTracNghiem\obj\Debug\QLTracNghiem.Migrations.DbInit.resources
