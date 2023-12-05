@@ -12,4 +12,5 @@ E:\ProjectOOP\QLTracNghiem\obj\Debug\QLTracNghiem.csproj.CoreCompileInputs.cache
 E:\ProjectOOP\QLTracNghiem\obj\Debug\QLTracNghiem.csproj.CopyComplete
 E:\ProjectOOP\QLTracNghiem\obj\Debug\QLTracNghiem.exe
 E:\ProjectOOP\QLTracNghiem\obj\Debug\QLTracNghiem.pdb
-E:\ProjectOOP\QLTracNghiem\obj\Debug\QLTracNghiem.Migrations.DbInit.resources
+E:\ProjectOOP\QLTracNghiem\obj\Debug\QLTracNghiem.FAccounts.resources
+E:\ProjectOOP\QLTracNghiem\obj\Debug\QLTracNghiem.Migrations.dbinit.resources

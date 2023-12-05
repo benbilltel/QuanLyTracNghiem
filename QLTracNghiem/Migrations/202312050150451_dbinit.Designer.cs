@@ -7,13 +7,13 @@ namespace QLTracNghiem.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class DbInit : IMigrationMetadata
+    public sealed partial class dbinit : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(DbInit));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(dbinit));
         
         string IMigrationMetadata.Id
         {
-            get { return "202312040410433_DbInit"; }
+            get { return "202312050150451_dbinit"; }
         }
         
         string IMigrationMetadata.Source

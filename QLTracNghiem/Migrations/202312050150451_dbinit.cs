@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class DbInit : DbMigration
+    public partial class dbinit : DbMigration
     {
         public override void Up()
         {
@@ -15,12 +15,14 @@
                         TaiKhoan = c.String(nullable: false, maxLength: 20),
                         MatKhau = c.String(nullable: false, maxLength: 20),
                     })
-                .PrimaryKey(t => t.Ma);
+                .PrimaryKey(t => t.Ma)
+                .Index(t => t.TaiKhoan, unique: true);
             
         }
         
         public override void Down()
         {
+            DropIndex("dbo.UserAdmin", new[] { "TaiKhoan" });
             DropTable("dbo.UserAdmin");
         }
     }

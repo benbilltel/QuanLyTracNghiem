@@ -56,23 +56,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Controllers\Repositories\UserAdmin_Repo.cs" />
+    <Compile Include="Controllers\Services\UserAdmin_Ser.cs" />
+    <Compile Include="Migrations\202312050150451_dbinit.cs" />
+    <Compile Include="Migrations\202312050150451_dbinit.designer.cs">
+      <DependentUpon>202312050150451_dbinit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DTO\DTO_UserAdmin.cs" />
+    <Compile Include="Views\FAccounts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202312040410433_DbInit.cs" />
-    <Compile Include="Migrations\202312040410433_DbInit.designer.cs">
-      <DependentUpon>202312040410433_DbInit.cs</DependentUpon>
+    <Compile Include="Views\FAccounts.Designer.cs">
+      <DependentUpon>FAccounts.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\QLTracNghiemContext.cs" />
-    <Compile Include="Models\UserAdmin.cs" />
+    <Compile Include="Models\Data\QLTracNghiemContext.cs" />
+    <Compile Include="Models\Data\UserAdmin.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Migrations\202312040410433_DbInit.resx">
-      <DependentUpon>202312040410433_DbInit.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202312050150451_dbinit.resx">
+      <DependentUpon>202312050150451_dbinit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -83,6 +86,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\FAccounts.resx">
+      <DependentUpon>FAccounts.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -97,6 +103,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
