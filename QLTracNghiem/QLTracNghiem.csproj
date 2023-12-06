@@ -62,6 +62,23 @@
     <Compile Include="Migrations\202312050150451_dbinit.designer.cs">
       <DependentUpon>202312050150451_dbinit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202312060816389_addTable.cs" />
+    <Compile Include="Migrations\202312060816389_addTable.designer.cs">
+      <DependentUpon>202312060816389_addTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202312060928257_addTableDeThi.cs" />
+    <Compile Include="Migrations\202312060928257_addTableDeThi.designer.cs">
+      <DependentUpon>202312060928257_addTableDeThi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Data\CauHoi.cs" />
+    <Compile Include="Models\Data\ChiTietBaiLam.cs" />
+    <Compile Include="Models\Data\ChiTietDeThi.cs" />
+    <Compile Include="Models\Data\Chuong.cs" />
+    <Compile Include="Models\Data\DanhSachMonHoc.cs" />
+    <Compile Include="Models\Data\DeThi.cs" />
+    <Compile Include="Models\Data\HocVien.cs" />
+    <Compile Include="Models\Data\LopHoc.cs" />
+    <Compile Include="Models\Data\MonHoc.cs" />
     <Compile Include="Models\DTO\DTO_UserAdmin.cs" />
     <Compile Include="Views\FAccounts.cs">
       <SubType>Form</SubType>
@@ -76,6 +93,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Migrations\202312050150451_dbinit.resx">
       <DependentUpon>202312050150451_dbinit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312060816389_addTable.resx">
+      <DependentUpon>202312060816389_addTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312060928257_addTableDeThi.resx">
+      <DependentUpon>202312060928257_addTableDeThi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

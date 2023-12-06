@@ -14,3 +14,5 @@ E:\ProjectOOP\QLTracNghiem\obj\Debug\QLTracNghiem.exe
 E:\ProjectOOP\QLTracNghiem\obj\Debug\QLTracNghiem.pdb
 E:\ProjectOOP\QLTracNghiem\obj\Debug\QLTracNghiem.FAccounts.resources
 E:\ProjectOOP\QLTracNghiem\obj\Debug\QLTracNghiem.Migrations.dbinit.resources
+E:\ProjectOOP\QLTracNghiem\obj\Debug\QLTracNghiem.Migrations.addTable.resources
+E:\ProjectOOP\QLTracNghiem\obj\Debug\QLTracNghiem.Migrations.addTableDeThi.resources
