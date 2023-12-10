@@ -1,5 +1,5 @@
-﻿using QLTracNghiem.Controllers.Services;
-using QLTracNghiem.Models.DTO;
+﻿using QLTracNghiem.Controllers;
+using QLTracNghiem.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,11 +20,11 @@ namespace QLTracNghiem
             InitializeComponent();
             
         }
-        UserAdmin_Ser usAD_ser = new UserAdmin_Ser();   
+        UserAdminController usAD_controller = new UserAdminController();   
         private void FAccounts_Load(object sender, EventArgs e)
         {
-            usAD_ser.Load();
-            bindingSource.DataSource = usAD_ser.tblData;
+            usAD_controller.Load();
+            bindingSource.DataSource = usAD_controller.tblData;
             dtgvUsAdmin.DataSource = bindingSource;
             dtgvUsAdmin.Columns["Mã"].Visible = false;
             dtgvUsAdmin.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -38,10 +38,10 @@ namespace QLTracNghiem
             {
                 if(txtTaiKhoanUsAD.ReadOnly != true)
                 {
-                    DTO_UserAdmin dtoUsAd = new DTO_UserAdmin();
-                    dtoUsAd.TaiKhoan = txtTaiKhoanUsAD.Text.Trim();
-                    dtoUsAd.MatKhau = txtMatKhauUsAD.Text.Trim();
-                    usAD_ser.Save(0, dtoUsAd);
+                    UserAdmin usAD = new UserAdmin();
+                    usAD.TaiKhoan = txtTaiKhoanUsAD.Text.Trim();
+                    usAD.MatKhau = txtMatKhauUsAD.Text.Trim();
+                    usAD_controller.Save(0, usAD);
                     txtMatKhauUsAD.Text = string.Empty;
                     txtTaiKhoanUsAD.Text = string.Empty;
                     MessageBox.Show("Lưu thành công");
@@ -49,11 +49,11 @@ namespace QLTracNghiem
                 else
                 {
                     DataGridViewRow row = dtgvUsAdmin.SelectedRows[0];
-                    DTO_UserAdmin dtoUsAd = new DTO_UserAdmin();
-                    dtoUsAd.Ma = int.Parse(row.Cells["Mã"].Value.ToString().Trim());
-                    dtoUsAd.TaiKhoan = txtTaiKhoanUsAD.Text.Trim();
-                    dtoUsAd.MatKhau = txtMatKhauUsAD.Text.Trim();
-                    usAD_ser.Save(1, dtoUsAd);
+                    UserAdmin usAD = new UserAdmin();
+                    usAD.Ma = int.Parse(row.Cells["Mã"].Value.ToString().Trim());
+                    usAD.TaiKhoan = txtTaiKhoanUsAD.Text.Trim();
+                    usAD.MatKhau = txtMatKhauUsAD.Text.Trim();
+                    usAD_controller.Save(1, usAD);
                     txtMatKhauUsAD.Text = string.Empty;
                     txtTaiKhoanUsAD.Text = string.Empty;
                     txtTaiKhoanUsAD.ReadOnly = false;
@@ -93,16 +93,16 @@ namespace QLTracNghiem
             {
                 try
                 {
-                    List<DTO_UserAdmin> listRemove = new List<DTO_UserAdmin>(); 
+                    List<UserAdmin> listRemove = new List<UserAdmin>(); 
                     foreach (DataGridViewRow row in dtgvUsAdmin.SelectedRows)
                     {
-                        DTO_UserAdmin dTO_UserAdmin = new DTO_UserAdmin();
-                        dTO_UserAdmin.Ma = (int)row.Cells["Mã"].Value;
-                        dTO_UserAdmin.TaiKhoan = row.Cells["Tài khoản"].Value.ToString().Trim();
-                        dTO_UserAdmin.MatKhau = row.Cells["Mật khẩu"].Value.ToString().Trim();
-                        listRemove.Add(dTO_UserAdmin);  
+                        UserAdmin usAD = new UserAdmin();
+                        usAD.Ma = (int)row.Cells["Mã"].Value;
+                        usAD.TaiKhoan = row.Cells["Tài khoản"].Value.ToString().Trim();
+                        usAD.MatKhau = row.Cells["Mật khẩu"].Value.ToString().Trim();
+                        listRemove.Add(usAD);  
                     }
-                    usAD_ser.Remove(listRemove);
+                    usAD_controller.Remove(listRemove);
                     FAccounts_Load(sender, e);
                     MessageBox.Show("Xóa thành công");
                 }catch(ArgumentException ex)

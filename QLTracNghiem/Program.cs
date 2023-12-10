@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLTracNghiem.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace QLTracNghiem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FAccounts());
+            Application.Run(new FAdmin());
         }
     }
 }

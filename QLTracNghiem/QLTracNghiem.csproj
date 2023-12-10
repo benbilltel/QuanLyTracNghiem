@@ -56,30 +56,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\Repositories\UserAdmin_Repo.cs" />
-    <Compile Include="Controllers\Services\UserAdmin_Ser.cs" />
-    <Compile Include="Migrations\202312050150451_dbinit.cs" />
-    <Compile Include="Migrations\202312050150451_dbinit.designer.cs">
-      <DependentUpon>202312050150451_dbinit.cs</DependentUpon>
+    <Compile Include="Controllers\HocVienController.cs" />
+    <Compile Include="Controllers\LopHocController.cs" />
+    <Compile Include="Controllers\MonHocController.cs" />
+    <Compile Include="Controllers\QLTracNghiemConttroller.cs" />
+    <Compile Include="Controllers\UserAdminController.cs" />
+    <Compile Include="Migrations\202312090134188_dbinit.cs" />
+    <Compile Include="Migrations\202312090134188_dbinit.designer.cs">
+      <DependentUpon>202312090134188_dbinit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202312060816389_addTable.cs" />
-    <Compile Include="Migrations\202312060816389_addTable.designer.cs">
-      <DependentUpon>202312060816389_addTable.cs</DependentUpon>
+    <Compile Include="Migrations\202312091502169_updateHV.cs" />
+    <Compile Include="Migrations\202312091502169_updateHV.designer.cs">
+      <DependentUpon>202312091502169_updateHV.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202312060928257_addTableDeThi.cs" />
-    <Compile Include="Migrations\202312060928257_addTableDeThi.designer.cs">
-      <DependentUpon>202312060928257_addTableDeThi.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Data\CauHoi.cs" />
-    <Compile Include="Models\Data\ChiTietBaiLam.cs" />
-    <Compile Include="Models\Data\ChiTietDeThi.cs" />
-    <Compile Include="Models\Data\Chuong.cs" />
-    <Compile Include="Models\Data\DanhSachMonHoc.cs" />
-    <Compile Include="Models\Data\DeThi.cs" />
-    <Compile Include="Models\Data\HocVien.cs" />
-    <Compile Include="Models\Data\LopHoc.cs" />
-    <Compile Include="Models\Data\MonHoc.cs" />
-    <Compile Include="Models\DTO\DTO_UserAdmin.cs" />
+    <Compile Include="Models\CauHoi.cs" />
+    <Compile Include="Models\ChiTietBaiLam.cs" />
+    <Compile Include="Models\ChiTietDeThi.cs" />
+    <Compile Include="Models\Chuong.cs" />
+    <Compile Include="Models\DanhSachMonHoc.cs" />
+    <Compile Include="Models\DeThi.cs" />
+    <Compile Include="Models\HocVien.cs" />
+    <Compile Include="Models\LopHoc.cs" />
+    <Compile Include="Models\MonHoc.cs" />
+    <Compile Include="Models\UserHocVien.cs" />
     <Compile Include="Views\FAccounts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,18 +86,33 @@
       <DependentUpon>FAccounts.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Data\QLTracNghiemContext.cs" />
-    <Compile Include="Models\Data\UserAdmin.cs" />
+    <Compile Include="Models\QLTracNghiemContext.cs" />
+    <Compile Include="Models\UserAdmin.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Migrations\202312050150451_dbinit.resx">
-      <DependentUpon>202312050150451_dbinit.cs</DependentUpon>
+    <Compile Include="Views\FAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FAdmin.Designer.cs">
+      <DependentUpon>FAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FLopHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FLopHoc.Designer.cs">
+      <DependentUpon>FLopHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FMonHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FMonHoc.Designer.cs">
+      <DependentUpon>FMonHoc.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Migrations\202312090134188_dbinit.resx">
+      <DependentUpon>202312090134188_dbinit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202312060816389_addTable.resx">
-      <DependentUpon>202312060816389_addTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202312060928257_addTableDeThi.resx">
-      <DependentUpon>202312060928257_addTableDeThi.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202312091502169_updateHV.resx">
+      <DependentUpon>202312091502169_updateHV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -111,6 +125,12 @@
     </Compile>
     <EmbeddedResource Include="Views\FAccounts.resx">
       <DependentUpon>FAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FAdmin.resx">
+      <DependentUpon>FAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FLopHoc.resx">
+      <DependentUpon>FLopHoc.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
