@@ -28,11 +28,16 @@ namespace QLTracNghiem.Models
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<ChiTietDeThi>()
-                .HasKey(ctdt => new { ctdt.MaCauHoi, ctdt.MaDeThi });
+                .HasKey(ctdt => new { ctdt.MaCH, ctdt.MaDT });
             modelBuilder.Entity<ChiTietBaiLam>()
                 .HasKey(ctbl => new { ctbl.MaHV, ctbl.MaDT, ctbl.MaCH });
             modelBuilder.Entity<DanhSachMonHoc>()
                 .HasKey(dsmh => new { dsmh.MaMH, dsmh.MaLH });
+            modelBuilder.Entity<DeThi>()
+        .HasRequired(d => d.MonHoc)
+        .WithMany()
+        .HasForeignKey(d => d.MaMH)
+        .WillCascadeOnDelete(false);
         }
     }
 }

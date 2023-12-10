@@ -56,10 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\DangNhapController.cs" />
     <Compile Include="Controllers\HocVienController.cs" />
     <Compile Include="Controllers\LopHocController.cs" />
     <Compile Include="Controllers\MonHocController.cs" />
     <Compile Include="Controllers\QLTracNghiemConttroller.cs" />
+    <Compile Include="Controllers\ThiController.cs" />
     <Compile Include="Controllers\UserAdminController.cs" />
     <Compile Include="Migrations\202312090134188_dbinit.cs" />
     <Compile Include="Migrations\202312090134188_dbinit.designer.cs">
@@ -68,6 +70,22 @@
     <Compile Include="Migrations\202312091502169_updateHV.cs" />
     <Compile Include="Migrations\202312091502169_updateHV.designer.cs">
       <DependentUpon>202312091502169_updateHV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202312100354370_updateForeignKey.cs" />
+    <Compile Include="Migrations\202312100354370_updateForeignKey.designer.cs">
+      <DependentUpon>202312100354370_updateForeignKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202312100531030_updateDapANDung.cs" />
+    <Compile Include="Migrations\202312100531030_updateDapANDung.designer.cs">
+      <DependentUpon>202312100531030_updateDapANDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202312101050505_updateClass.cs" />
+    <Compile Include="Migrations\202312101050505_updateClass.designer.cs">
+      <DependentUpon>202312101050505_updateClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202312101259132_addTrangThaiUserHocVien.cs" />
+    <Compile Include="Migrations\202312101259132_addTrangThaiUserHocVien.designer.cs">
+      <DependentUpon>202312101259132_addTrangThaiUserHocVien.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\CauHoi.cs" />
     <Compile Include="Models\ChiTietBaiLam.cs" />
@@ -96,6 +114,18 @@
     <Compile Include="Views\FAdmin.Designer.cs">
       <DependentUpon>FAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\FBaiLam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FBaiLam.Designer.cs">
+      <DependentUpon>FBaiLam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FDangNhap.Designer.cs">
+      <DependentUpon>FDangNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\FLopHoc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,11 +138,29 @@
     <Compile Include="Views\FMonHoc.Designer.cs">
       <DependentUpon>FMonHoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\FThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FThi.Designer.cs">
+      <DependentUpon>FThi.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Migrations\202312090134188_dbinit.resx">
       <DependentUpon>202312090134188_dbinit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202312091502169_updateHV.resx">
       <DependentUpon>202312091502169_updateHV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312100354370_updateForeignKey.resx">
+      <DependentUpon>202312100354370_updateForeignKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312100531030_updateDapANDung.resx">
+      <DependentUpon>202312100531030_updateDapANDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312101050505_updateClass.resx">
+      <DependentUpon>202312101050505_updateClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312101259132_addTrangThaiUserHocVien.resx">
+      <DependentUpon>202312101259132_addTrangThaiUserHocVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -129,8 +177,20 @@
     <EmbeddedResource Include="Views\FAdmin.resx">
       <DependentUpon>FAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\FBaiLam.resx">
+      <DependentUpon>FBaiLam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FDangNhap.resx">
+      <DependentUpon>FDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\FLopHoc.resx">
       <DependentUpon>FLopHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FMonHoc.resx">
+      <DependentUpon>FMonHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FThi.resx">
+      <DependentUpon>FThi.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

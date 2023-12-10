@@ -11,21 +11,32 @@ namespace QLTracNghiem.Models.Data
     [Table("CauHoi")]
     public class CauHoi
     {
+        public CauHoi() { }
+        private int ma;
+        private string noiDung;
+        private string dapAnA;
+        private string dapAnB;
+        private string dapAnC;
+        private string dapAnD;
+        private int dapAnDung;
+        private int maChuong;
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Ma {  get; set; }
+        public int Ma {  get => ma; set => ma = value; }
         [Required,Column(TypeName = "ntext")]
-        public string NoiDung {  get; set; }
+        public string NoiDung { get => noiDung; set => noiDung = value; }
         [Required, Column(TypeName = "ntext")]
-        public string DapAnA { get; set; }
+        public string DapAnA { get => dapAnA; set => dapAnA = value; }
         [Required, Column(TypeName = "ntext")]
-        public string DapAnB { get; set; }
+        public string DapAnB { get => dapAnB; set => dapAnB = value; }
         [Required, Column(TypeName = "ntext")]
-        public string DapAnC { get; set; }
+        public string DapAnC { get => dapAnC; set => dapAnC = value; }
         [Required, Column(TypeName = "ntext")]
-        public string DapAnD { get; set; }
-        [Required, MaxLength(1,ErrorMessage = "Đáp án không hợp lệ")]
-        public char DapAnDung {  get; set; }    
+        public string DapAnD { get => dapAnD; set => dapAnD = value; }
+        
+        public int DapAnDung { get => dapAnDung; set => dapAnDung = value; }    
+        public int MaChuong { get => maChuong; set => maChuong = value; }
+        [ForeignKey(nameof(MaChuong))]
         public Chuong Chuong { get; set; }
     }
 }

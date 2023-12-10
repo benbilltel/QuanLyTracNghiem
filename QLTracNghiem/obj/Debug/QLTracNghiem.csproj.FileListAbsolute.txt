@@ -17,3 +17,11 @@ E:\ProjectOOP\QLTracNghiem\obj\Debug\QLTracNghiem.Views.FAdmin.resources
 E:\ProjectOOP\QLTracNghiem\obj\Debug\QLTracNghiem.Views.FLopHoc.resources
 E:\ProjectOOP\QLTracNghiem\obj\Debug\QLTracNghiem.Migrations.dbinit.resources
 E:\ProjectOOP\QLTracNghiem\obj\Debug\QLTracNghiem.Migrations.updateHV.resources
+E:\ProjectOOP\QLTracNghiem\obj\Debug\QLTracNghiem.Views.FMonHoc.resources
+E:\ProjectOOP\QLTracNghiem\obj\Debug\QLTracNghiem.Migrations.updateForeignKey.resources
+E:\ProjectOOP\QLTracNghiem\obj\Debug\QLTracNghiem.Migrations.updateDapANDung.resources
+E:\ProjectOOP\QLTracNghiem\obj\Debug\QLTracNghiem.Migrations.updateClass.resources
+E:\ProjectOOP\QLTracNghiem\obj\Debug\QLTracNghiem.Migrations.addTrangThaiUserHocVien.resources
+E:\ProjectOOP\QLTracNghiem\obj\Debug\QLTracNghiem.Views.FDangNhap.resources
+E:\ProjectOOP\QLTracNghiem\obj\Debug\QLTracNghiem.Views.FThi.resources
+E:\ProjectOOP\QLTracNghiem\obj\Debug\QLTracNghiem.Views.FBaiLam.resources

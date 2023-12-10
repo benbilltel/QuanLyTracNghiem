@@ -11,10 +11,13 @@ namespace QLTracNghiem.Models.Data
     [Table("MonHoc")]
     public class MonHoc
     {
+        public MonHoc () { }
+        private int ma;
+        private string tenMH;
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Ma {  get; set; }
+        public int Ma {  get => ma; set=> ma = value; }
         [Required, MaxLength(20, ErrorMessage = "Tên môn học không được quá 20 ký tự."), MinLength(3, ErrorMessage = "Tên môn học có ít nhất 3 ký tự."), Index(IsUnique = true)]
-        public string TenMH { get; set; }
+        public string TenMH { get=> tenMH; set => tenMH = value; }
     }
 }

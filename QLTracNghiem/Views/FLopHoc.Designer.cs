@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtSearchHV = new System.Windows.Forms.TextBox();
             this.cbGioiTinh = new System.Windows.Forms.ComboBox();
             this.btnSaveHV = new System.Windows.Forms.Button();
             this.txtSDT = new System.Windows.Forms.TextBox();
@@ -49,7 +50,6 @@
             this.dtgvDanhSachMon = new System.Windows.Forms.DataGridView();
             this.dtgvLopHoc = new System.Windows.Forms.DataGridView();
             this.txtTenLop = new System.Windows.Forms.TextBox();
-            this.txtSearchHV = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvHocVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDanhSachMon)).BeginInit();
@@ -83,6 +83,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1060, 434);
             this.panel1.TabIndex = 0;
+            // 
+            // txtSearchHV
+            // 
+            this.txtSearchHV.Location = new System.Drawing.Point(643, 37);
+            this.txtSearchHV.Name = "txtSearchHV";
+            this.txtSearchHV.Size = new System.Drawing.Size(115, 20);
+            this.txtSearchHV.TabIndex = 22;
+            this.txtSearchHV.TextChanged += new System.EventHandler(this.txtSearchHV_TextChanged);
             // 
             // cbGioiTinh
             // 
@@ -193,7 +201,6 @@
             this.txtMaLop.ReadOnly = true;
             this.txtMaLop.Size = new System.Drawing.Size(115, 20);
             this.txtMaLop.TabIndex = 13;
-            this.txtMaLop.Visible = false;
             // 
             // btnRefreshHV
             // 
@@ -275,14 +282,6 @@
             this.txtTenLop.Name = "txtTenLop";
             this.txtTenLop.Size = new System.Drawing.Size(115, 20);
             this.txtTenLop.TabIndex = 1;
-            // 
-            // txtSearchHV
-            // 
-            this.txtSearchHV.Location = new System.Drawing.Point(643, 37);
-            this.txtSearchHV.Name = "txtSearchHV";
-            this.txtSearchHV.Size = new System.Drawing.Size(115, 20);
-            this.txtSearchHV.TabIndex = 22;
-            this.txtSearchHV.TextChanged += new System.EventHandler(this.txtSearchHV_TextChanged);
             // 
             // FLopHoc
             // 

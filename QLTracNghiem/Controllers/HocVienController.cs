@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.AxHost;
 
 namespace QLTracNghiem.Controllers
 {
@@ -89,7 +90,28 @@ namespace QLTracNghiem.Controllers
                         throw new ArgumentException("Thêm thất bại");
                     }
                 }
-                var lopHoc = db.LopHocs.FirstOrDefault(h => h.Ma == hocVien.MaLH);
+                var hv = db.HocViens.FirstOrDefault(h => h.Ma == hocVien.Ma);
+                if (hv != null)
+                {
+                    UserHocVien us = new UserHocVien();
+                    us.MaHV = hv.Ma;
+                    us.TaiKhoan = hv.SoDienThoai;
+                    us.MatKhau = hv.SoDienThoai;
+                    us.TrangThai = 1;
+                    db.UserHocViens.Add(us);
+                    if (db.Entry(us).State == System.Data.Entity.EntityState.Added)
+                    {
+
+                        try
+                        {
+                            db.SaveChanges();
+                        }
+                        catch
+                        {
+                            throw new ArgumentException("Tạo tài khoản thất bại");
+                        }
+                    }
+                }
             }
             else
             {
@@ -105,6 +127,23 @@ namespace QLTracNghiem.Controllers
                         try
                         {
                             db.SaveChanges();
+                            var us = db.UserHocViens.FirstOrDefault(u => u.MaHV == hv.Ma);
+                            if (us != null)
+                            {
+                                us.TaiKhoan = hv.SoDienThoai;
+                                if (db.Entry(us).State == System.Data.Entity.EntityState.Modified)
+                                {
+                                    db.SaveChanges();
+                                }
+                                else
+                                {
+                                    throw new ArgumentException("Cập nhật thất bại");
+                                }
+                            }
+                            else
+                            {
+                                throw new ArgumentException("Cập nhật thất bại");
+                            }
                         }
                         catch
                         {
@@ -127,21 +166,40 @@ namespace QLTracNghiem.Controllers
                 var hv = db.HocViens.FirstOrDefault(ua => ua.Ma == maHv);
                 if (hv != null)
                 {
-                    db.HocViens.Remove(hv);
-                    if (db.Entry(hv).State == System.Data.Entity.EntityState.Deleted)
+                    var us = db.UserHocViens.FirstOrDefault(u => u.MaHV == hv.Ma);
+                    db.UserHocViens.Remove(us);
+                    if (db.Entry(us).State == System.Data.Entity.EntityState.Deleted)
                     {
                         try
                         {
                             db.SaveChanges();
+                            db.HocViens.Remove(hv);
+                            if (db.Entry(hv).State == System.Data.Entity.EntityState.Deleted)
+                            {
+                                try
+                                {
+                                    db.SaveChanges();
+                                }
+                                catch
+                                {
+                                    throw new ArgumentException("Xóa thất bại");
+                                }
+
+
+
+                            }
+                            else
+                            {
+                                throw new ArgumentException("Xóa thất bại");
+                            }
                         }
                         catch
                         {
                             throw new ArgumentException("Xóa thất bại");
                         }
-
-
-
                     }
+                   
+                    
                     else
                     {
                         throw new ArgumentException("Xóa thất bại");

@@ -65,9 +65,7 @@ namespace QLTracNghiem.Views
                     LopHoc lh = new LopHoc();
                     lh.TenLH = txtTenLop.Text.Trim();
                     lhController.Save(0, lh);
-                    txtMaLop.Text = string.Empty;
-                    txtTenLop.Text = string.Empty;
-                    txtSearchLop.Text = string.Empty;
+                    btnRefreshLH_Click(sender, e);
                     MessageBox.Show("Lưu thành công");
                 }
                     
@@ -80,9 +78,7 @@ namespace QLTracNghiem.Views
                     lh.TenLH = txtTenLop.Text.Trim();
                     
                     lhController.Save(1, lh);
-                    txtMaLop.Text = string.Empty;
-                    txtTenLop.Text = string.Empty;
-                    txtSearchLop.Text = string.Empty;
+                    btnRefreshLH_Click(sender, e);
                     FLopHoc_Load(sender, e);
                     MessageBox.Show("Lưu thành công");
                 }
@@ -124,6 +120,9 @@ namespace QLTracNghiem.Views
             txtMaLop.Text = string.Empty;
             txtTenLop.Text = string.Empty;
             txtSearchLop.Text = string.Empty;
+            lhController.Load();
+            bindingSourceTblLH.DataSource = lhController.tblData;
+            dtgvLopHoc.Refresh();
         }
 
         private void btnDeleteMH_Click(object sender, EventArgs e)
@@ -294,9 +293,9 @@ namespace QLTracNghiem.Views
 
         private void dtgvHocVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.RowIndex > 0)
+            if(e.RowIndex >= 0)
             {
-                DataGridViewRow row = dtgvHocVien.SelectedRows[0];
+                DataGridViewRow row = dtgvHocVien.Rows[e.RowIndex];
                 txtMaHV.Text = row.Cells["Mã"].Value.ToString().Trim();
                 txtHoHV.Text = row.Cells["Họ"].Value.ToString().Trim();
                 txtTenHV.Text = row.Cells["Tên"].Value.ToString().Trim();
@@ -314,6 +313,7 @@ namespace QLTracNghiem.Views
             txtDiaChi.Text = string.Empty;
             txtSDT.Text = string.Empty;
             cbGioiTinh.SelectedIndex = 0;
+            dtgvHocVien.Refresh();
         }
 
         private void txtSearchLop_TextChanged(object sender, EventArgs e)

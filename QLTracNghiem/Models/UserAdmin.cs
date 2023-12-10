@@ -11,14 +11,17 @@ namespace QLTracNghiem.Models
     [Table("UserAdmin")]
     public class UserAdmin
     {
-
+        public UserAdmin() { }
+        private int ma;
+        private string taiKhoan;
+        private string matKhau;
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Ma {  get; set; }
+        public int Ma {  get=> ma; set=> ma = value; }
         [Required, MaxLength(20, ErrorMessage = "Tài khoản không được quá 20 ký tự."), MinLength(6, ErrorMessage = "Tài khoản phải có ít nhất 6 ký tự."),Index(IsUnique =true)]
-        public string TaiKhoan { get; set; }
+        public string TaiKhoan { get=> taiKhoan; set=> taiKhoan = value; }
         [Required, MaxLength(20, ErrorMessage = "Mật khẩu không được quá 20 ký tự."), MinLength(6, ErrorMessage = "Mật khẩu phải có ít nhất 6 ký tự.")]
-        public string MatKhau { get; set; }
+        public string MatKhau { get => matKhau; set=> matKhau = value; }
     }
 }
 

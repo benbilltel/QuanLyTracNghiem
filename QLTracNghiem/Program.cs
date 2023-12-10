@@ -17,7 +17,7 @@ namespace QLTracNghiem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FAdmin());
+            Application.Run(new FDangNhap());
         }
     }
 }

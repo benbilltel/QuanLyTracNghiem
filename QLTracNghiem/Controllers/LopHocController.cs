@@ -3,6 +3,7 @@ using QLTracNghiem.Models.Data;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -50,10 +51,7 @@ namespace QLTracNghiem.Controllers
                     }
                 }
 
-                DataRow row = tblData.NewRow();
-                row["Mã"] = lh.Ma;
-                row["Tên lớp"] = lh.TenLH;
-                tblData.Rows.Add(row);
+               
             }
             if (action == 1)
             {
@@ -176,7 +174,7 @@ namespace QLTracNghiem.Controllers
             }
             
         }
-
+        
     }
 
 }

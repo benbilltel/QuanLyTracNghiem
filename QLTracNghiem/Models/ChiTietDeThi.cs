@@ -11,18 +11,21 @@ namespace QLTracNghiem.Models.Data
     [Table("ChiTietDeThi")]
     public class ChiTietDeThi
     {
-        
+        public ChiTietDeThi () { }
+        private int maCH;
+        private int maDT;
+
         [Key]
         [Column(Order = 1)]
-        public int MaCauHoi { get; set; } 
+        public int MaCH { get => maCH; set => maCH = value; } 
 
         [Key]
         [Column(Order = 2)]
-        public int MaDeThi { get; set; }
-        [ForeignKey(nameof(MaCauHoi))] 
+        public int MaDT { get => maDT; set => maDT = value; }
+        [ForeignKey(nameof(MaCH))] 
         
         public virtual CauHoi CauHoi { get; set; }
-        [ForeignKey(nameof(MaDeThi))]
+        [ForeignKey(nameof(MaDT))]
         public virtual DeThi DeThi { get; set; }
     }
 }
