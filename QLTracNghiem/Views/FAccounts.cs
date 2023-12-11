@@ -118,5 +118,10 @@ namespace QLTracNghiem
             bindingSource.Filter = string.Format("[Tài khoản] LIKE '%{0}%'", searchValue);
             dtgvUsAdmin.Refresh();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

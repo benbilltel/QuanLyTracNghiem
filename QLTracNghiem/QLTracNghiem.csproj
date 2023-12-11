@@ -170,6 +170,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Views\FAccounts.resx">
       <DependentUpon>FAccounts.cs</DependentUpon>
@@ -206,7 +207,24 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Img\username.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\login_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\admin icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\nền admin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\adminbackgr.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

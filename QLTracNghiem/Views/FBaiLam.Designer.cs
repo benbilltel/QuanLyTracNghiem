@@ -43,30 +43,30 @@
             this.lblCauHoi.AutoSize = true;
             this.lblCauHoi.Location = new System.Drawing.Point(41, 13);
             this.lblCauHoi.Name = "lblCauHoi";
-            this.lblCauHoi.Size = new System.Drawing.Size(42, 13);
+            this.lblCauHoi.Size = new System.Drawing.Size(43, 13);
             this.lblCauHoi.TabIndex = 0;
-            this.lblCauHoi.Text = "CauHoi";
+            this.lblCauHoi.Text = "Câu hỏi";
             // 
             // rdDapAnA
             // 
             this.rdDapAnA.AutoSize = true;
             this.rdDapAnA.Location = new System.Drawing.Point(44, 196);
             this.rdDapAnA.Name = "rdDapAnA";
-            this.rdDapAnA.Size = new System.Drawing.Size(61, 17);
+            this.rdDapAnA.Size = new System.Drawing.Size(70, 17);
             this.rdDapAnA.TabIndex = 1;
             this.rdDapAnA.TabStop = true;
-            this.rdDapAnA.Text = "dapana";
+            this.rdDapAnA.Text = "Đáp án A";
             this.rdDapAnA.UseVisualStyleBackColor = true;
             // 
             // rdDapAnB
             // 
             this.rdDapAnB.AutoSize = true;
-            this.rdDapAnB.Location = new System.Drawing.Point(354, 196);
+            this.rdDapAnB.Location = new System.Drawing.Point(426, 196);
             this.rdDapAnB.Name = "rdDapAnB";
-            this.rdDapAnB.Size = new System.Drawing.Size(61, 17);
+            this.rdDapAnB.Size = new System.Drawing.Size(70, 17);
             this.rdDapAnB.TabIndex = 1;
             this.rdDapAnB.TabStop = true;
-            this.rdDapAnB.Text = "dapanb";
+            this.rdDapAnB.Text = "Đáp án B";
             this.rdDapAnB.UseVisualStyleBackColor = true;
             // 
             // rdDapAnC
@@ -74,21 +74,21 @@
             this.rdDapAnC.AutoSize = true;
             this.rdDapAnC.Location = new System.Drawing.Point(44, 295);
             this.rdDapAnC.Name = "rdDapAnC";
-            this.rdDapAnC.Size = new System.Drawing.Size(64, 17);
+            this.rdDapAnC.Size = new System.Drawing.Size(70, 17);
             this.rdDapAnC.TabIndex = 1;
             this.rdDapAnC.TabStop = true;
-            this.rdDapAnC.Text = "DapanC";
+            this.rdDapAnC.Text = "Đáp án C";
             this.rdDapAnC.UseVisualStyleBackColor = true;
             // 
             // rdDapAnD
             // 
             this.rdDapAnD.AutoSize = true;
-            this.rdDapAnD.Location = new System.Drawing.Point(354, 295);
+            this.rdDapAnD.Location = new System.Drawing.Point(426, 295);
             this.rdDapAnD.Name = "rdDapAnD";
-            this.rdDapAnD.Size = new System.Drawing.Size(61, 17);
+            this.rdDapAnD.Size = new System.Drawing.Size(71, 17);
             this.rdDapAnD.TabIndex = 2;
             this.rdDapAnD.TabStop = true;
-            this.rdDapAnD.Text = "dapand";
+            this.rdDapAnD.Text = "Đáp án D";
             this.rdDapAnD.UseVisualStyleBackColor = true;
             // 
             // btnNext
@@ -115,9 +115,9 @@
             // 
             this.btnNop.Location = new System.Drawing.Point(698, 13);
             this.btnNop.Name = "btnNop";
-            this.btnNop.Size = new System.Drawing.Size(75, 23);
+            this.btnNop.Size = new System.Drawing.Size(90, 35);
             this.btnNop.TabIndex = 5;
-            this.btnNop.Text = "NopBai";
+            this.btnNop.Text = "Nộp bài";
             this.btnNop.UseVisualStyleBackColor = true;
             this.btnNop.Click += new System.EventHandler(this.btnNop_Click);
             // 
@@ -125,6 +125,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnNop);
             this.Controls.Add(this.btnPrev);
