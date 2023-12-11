@@ -105,6 +105,7 @@
             this.cbListMonThi.Name = "cbListMonThi";
             this.cbListMonThi.Size = new System.Drawing.Size(121, 21);
             this.cbListMonThi.TabIndex = 4;
+            this.cbListMonThi.SelectedIndexChanged += new System.EventHandler(this.cbListMonThi_SelectedIndexChanged);
             // 
             // btnThi
             // 
@@ -176,6 +177,7 @@
             this.Controls.Add(this.cbListMonThi);
             this.Name = "FThi";
             this.Text = "FThi";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FThi_FormClosed);
             this.Load += new System.EventHandler(this.FThi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvKetQua)).EndInit();
             this.groupBox1.ResumeLayout(false);

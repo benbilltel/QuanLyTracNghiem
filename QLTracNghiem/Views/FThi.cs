@@ -35,15 +35,30 @@ namespace QLTracNghiem.Views
             if (cbListMonThi.Items.Count > 0)
             {
                 cbListMonThi.SelectedIndex = 0;
+                
             }
         }
 
         private void btnThi_Click(object sender, EventArgs e)
         {
             FBaiLam fBaiLam = new FBaiLam(cbListMonThi.Text,hocVienThi);
-            fBaiLam.ShowDialog();
+            fBaiLam.Show();
         }
 
-        
+        private void cbListMonThi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbListMonThi.Items.Count > 0)
+            {
+                dtgvKetQua.DataSource = thiController.LoadKetQua(hocVienThi, cbListMonThi.Text);
+                dtgvKetQua.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            }
+        }
+
+        private void FThi_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FDangNhap fDang = new FDangNhap();
+            fDang.Show();
+            this.Close();
+        }
     }
 }

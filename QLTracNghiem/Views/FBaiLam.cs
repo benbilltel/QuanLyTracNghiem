@@ -33,7 +33,15 @@ namespace QLTracNghiem.Views
             {
                 tblCauHoi = thiController.LoadDeThi(tenMon);
 
-                LoadCauHoi(crr);
+                try
+                {
+                    LoadCauHoi(crr);
+                }
+                catch(ArgumentException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    this.Close();
+                }
                 rdDapAnA.Checked = false;
                 rdDapAnB.Checked = false;
                 rdDapAnC.Checked = false;
@@ -51,54 +59,61 @@ namespace QLTracNghiem.Views
         }
         public void LoadCauHoi(int maCH)
         {
-            DataRow row = tblCauHoi.Rows[maCH];
-            lblCauHoi.Text = row["Nội dung"].ToString();
-            rdDapAnA.Text = row["Đáp án A"].ToString();
-            rdDapAnB.Text = row["Đáp án B"].ToString();
-            rdDapAnC.Text = row["Đáp án C"].ToString();
-            rdDapAnD.Text = row["Đáp án D"].ToString();
-            if (int.Parse(row["Câu trả lời"].ToString()) == 0)
-            {
-                rdDapAnA.Checked = true;
-            }
-            if (int.Parse(row["Câu trả lời"].ToString()) == 1)
-            {
-                rdDapAnB.Checked = true;
-            }
-            if (int.Parse(row["Câu trả lời"].ToString()) == 2)
-            {
-                rdDapAnC.Checked = true;
-            }
-            if (int.Parse(row["Câu trả lời"].ToString()) == 3)
-            {
-                rdDapAnD.Checked = true;
+            if(tblCauHoi.Rows.Count>0){
+                DataRow row = tblCauHoi.Rows[maCH];
+                lblCauHoi.Text = row["Nội dung"].ToString();
+                rdDapAnA.Text = row["Đáp án A"].ToString();
+                rdDapAnB.Text = row["Đáp án B"].ToString();
+                rdDapAnC.Text = row["Đáp án C"].ToString();
+                rdDapAnD.Text = row["Đáp án D"].ToString();
+                if (int.Parse(row["Câu trả lời"].ToString()) == 0)
+                {
+                    rdDapAnA.Checked = true;
+                }
+                if (int.Parse(row["Câu trả lời"].ToString()) == 1)
+                {
+                    rdDapAnB.Checked = true;
+                }
+                if (int.Parse(row["Câu trả lời"].ToString()) == 2)
+                {
+                    rdDapAnC.Checked = true;
+                }
+                if (int.Parse(row["Câu trả lời"].ToString()) == 3)
+                {
+                    rdDapAnD.Checked = true;
+                }
+                else
+                {
+                    rdDapAnA.Checked = false;
+                    rdDapAnB.Checked = false;
+                    rdDapAnC.Checked = false;
+                    rdDapAnD.Checked = false;
+                }
+
+                int savedAnswer = int.Parse(row["Câu trả lời"].ToString());
+                switch (savedAnswer)
+                {
+                    case 0:
+                        rdDapAnA.Checked = true;
+                        break;
+                    case 1:
+                        rdDapAnB.Checked = true;
+                        break;
+                    case 2:
+                        rdDapAnC.Checked = true;
+                        break;
+                    case 3:
+                        rdDapAnD.Checked = true;
+                        break;
+                    default:
+                        break;
+                }
             }
             else
             {
-                rdDapAnA.Checked = false;
-                rdDapAnB.Checked = false;
-                rdDapAnC.Checked = false;
-                rdDapAnD.Checked = false;
+                throw new ArgumentException("Tải đề thi thất bại!");
             }
-            
-            int savedAnswer = int.Parse(row["Câu trả lời"].ToString());
-            switch (savedAnswer)
-            {
-                case 0:
-                    rdDapAnA.Checked = true;
-                    break;
-                case 1:
-                    rdDapAnB.Checked = true;
-                    break;
-                case 2:
-                    rdDapAnC.Checked = true;
-                    break;
-                case 3:
-                    rdDapAnD.Checked = true;
-                    break;
-                default:
-                    break;
-            }
+           
 
         }
         private void btnNext_Click(object sender, EventArgs e)
@@ -180,6 +195,8 @@ namespace QLTracNghiem.Views
             {
                 thiController.SaveBaiLam(ctbls);
                 MessageBox.Show("Bài làm đã được lưu!");
+                FThi fThi = new FThi(hocVienThi);
+                fThi.ShowDialog();
                 this.Close();
             }
             catch (ArgumentException ex)
@@ -187,6 +204,13 @@ namespace QLTracNghiem.Views
                 MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private void FBaiLam_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FThi fThi = new FThi(hocVienThi);
+            fThi.ShowDialog();
+            this.Close();
         }
     }
 }

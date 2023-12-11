@@ -208,22 +208,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Img\username.jpg" />
+    <None Include="img\username.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Img\password.png" />
+    <None Include="img\password.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Img\login_background.png" />
+    <None Include="img\login_background.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Img\admin icon.png" />
+    <None Include="img\admin icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Img\nền admin.jpg" />
+    <None Include="img\nền admin.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Img\adminbackgr.jpg" />
+    <None Include="img\adminbackgr.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -137,6 +137,7 @@
             this.Controls.Add(this.lblCauHoi);
             this.Name = "FBaiLam";
             this.Text = "FBaiLam";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FBaiLam_FormClosed);
             this.Load += new System.EventHandler(this.FBaiLam_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

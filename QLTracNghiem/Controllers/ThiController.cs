@@ -1,4 +1,5 @@
-﻿using QLTracNghiem.Models.Data;
+﻿using QLTracNghiem.Models;
+using QLTracNghiem.Models.Data;
 using QLTracNghiem.Views;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,6 @@ namespace QLTracNghiem.Controllers
         {
             Random rnd = new Random();
             var filteredChuongIds = db.Chuongs.Where(c => c.MaMH == mh.Ma).Select(c => c.Ma).ToList();
-            // Use the IDs to filter the questions
             var filteredCauHoi = db.CauHois.Where(q => filteredChuongIds.Contains(q.MaChuong)).ToList();
             var randomCauHoi = filteredCauHoi.OrderBy(x => rnd.Next()).Take(soLuongCauHoi).ToList();
             return randomCauHoi;
@@ -109,47 +109,66 @@ namespace QLTracNghiem.Controllers
                 }
             }
         }
-        /* public DataTable LoadKetQua(HocVien hv, string tenMH)
-         {
-             var mh = db.MonHocs.FirstOrDefault(m => m.TenMH.Equals(tenMH));
-             if(mh != null)
-             {
-                 DataTable tblKetQua = new DataTable();
-                 tblKetQua.Columns.Add("Mã đề thi", typeof(int));
-                 tblKetQua.Columns.Add("Kết quả",typeof(float));
+        public DataTable LoadKetQua(HocVien hv, string mh)
+        {
+            using (var newContext = new QLTracNghiemContext())
+            {
+                var monhoc = newContext.MonHocs.AsNoTracking().FirstOrDefault(m => m.TenMH.Equals(mh));
+                if (monhoc != null)
+                {
+                    var listDT = newContext.DeThis.AsNoTracking().Where(dt => dt.MaMH == monhoc.Ma).ToList();
+                    if (listDT.Count > 0)
+                    {
+                        DataTable dataTable = new DataTable();
+                        dataTable.Columns.Add("Mã đề thi", typeof(int));
+                        dataTable.Columns.Add("Ngày thi", typeof(DateTime));
+                        dataTable.Columns.Add("Kết quả", typeof(float));
+                        var listDTSaved = newContext.ChiTietBaiLams.AsNoTracking()
+                                    .Where(ct => ct.MaHV == hv.Ma)
+                                    .Select(ct => ct.MaDT)
+                                    .Distinct().ToList();
+                        foreach (var dtCheck in listDTSaved)
+                        {
 
-                 List<DeThi> filteredDethi = db.DeThis.Where(c=>c.MaMH == mh.Ma).ToList();
-                 foreach(DeThi maDT in filteredDethi)
-                 {
-                     DataRow row = tblKetQua.NewRow();
-                     row["Mã đề thi"] = maDT.Ma;
-                     row["Kết quả"] = TinhDiem(maDT,hv);
-                     tblKetQua.Rows.Add(row);
-                 }
-                 return tblKetQua;
-             }
-             return null;
-         }
-         private float TinhDiem(DeThi deThi,HocVien hv)
-         {
-             float count = 0f;
-             float tong = 0f;
-             foreach(ChiTietBaiLam ct in db.ChiTietBaiLams)
-             {
-                 if(ct.MaDT == deThi.Ma && ct.MaHV == hv.Ma)
-                 {
-                     var ch = db.CauHois.FirstOrDefault(m => m.Ma == ct.MaCH);
-                     if(ch != null)
-                     {
-                         if(ch.DapAnDung == ct.CauTL)
-                         {
-                             tong++;
-                         }
-                     }
-                     count++;
-                 }
-             }
-             return (tong/ count )* 10f;
-         }*/
+                            var listBL = newContext.ChiTietBaiLams.AsNoTracking().Where(ct => ct.MaHV == hv.Ma && ct.MaDT == dtCheck).ToList();
+                            if (listBL.Count > 0)
+                            {
+
+
+
+                                DataRow row = dataTable.NewRow();
+                                var ngayThi = newContext.DeThis.AsNoTracking()
+                                    .Where(d => d.Ma == dtCheck)
+                                    .Select(d => d.NgayThi)
+                                    .FirstOrDefault();
+
+                                row["Mã đề thi"] = dtCheck;
+                                row["Ngày thi"] = ngayThi;
+                                row["Kết quả"] = TinhDiem(newContext, dtCheck, hv.Ma);
+                                dataTable.Rows.Add(row);
+
+                            }
+                        }
+                        
+                        return dataTable.Rows.Count > 0 ? dataTable : null;
+                    }
+                }
+                return null;
+            }
+        }
+
+        private float TinhDiem(QLTracNghiemContext context, int maDT, int maHV)
+        {
+            var chiTietBaiLams = context.ChiTietBaiLams.AsNoTracking()
+                .Where(ct => ct.MaDT == maDT && ct.MaHV == maHV)
+                .ToList();
+
+            float tong = chiTietBaiLams.Count(ct => context.CauHois.AsNoTracking()
+                .Any(ch => ch.Ma == ct.MaCH && ch.DapAnDung == ct.CauTL));
+
+            return chiTietBaiLams.Count > 0 ? (tong / chiTietBaiLams.Count) * 10f : 0f;
+        }
+
+
     }
 }
