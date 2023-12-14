@@ -28,12 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.btnLogOut = new System.Windows.Forms.Button();
+            this.btnClassroom = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.Location = new System.Drawing.Point(64, 279);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(75, 23);
+            this.btnLogOut.TabIndex = 0;
+            this.btnLogOut.Text = "Log out";
+            this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
+            // btnClassroom
+            // 
+            this.btnClassroom.Location = new System.Drawing.Point(64, 186);
+            this.btnClassroom.Name = "btnClassroom";
+            this.btnClassroom.Size = new System.Drawing.Size(75, 23);
+            this.btnClassroom.TabIndex = 0;
+            this.btnClassroom.Text = "Classroom";
+            this.btnClassroom.UseVisualStyleBackColor = true;
+            this.btnClassroom.Click += new System.EventHandler(this.btnClassroom_Click);
+            // 
+            // FAdmin
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnClassroom);
+            this.Controls.Add(this.btnLogOut);
+            this.Name = "FAdmin";
             this.Text = "FAdmin";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FAdmin_FormClosed);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnLogOut;
+        private System.Windows.Forms.Button btnClassroom;
     }
 }

@@ -32,7 +32,7 @@ namespace QuanLyTracNghiem.Models
             modelBuilder.Entity<Assignment>()
                 .HasKey(ctbl => new { ctbl.IDStudent, ctbl.IDExam, ctbl.IDQuestion });
             modelBuilder.Entity<ListSubject>()
-                .HasKey(dsmh => new { dsmh.IDSubejct, dsmh.IDClassroom });
+                .HasKey(dsmh => new { dsmh.IDSubject, dsmh.IDClassroom });
             modelBuilder.Entity<Exam>()
         .HasRequired(d => d.Subject)
         .WithMany()

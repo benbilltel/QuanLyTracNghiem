@@ -16,8 +16,8 @@ namespace QuanLyTracNghiem.Models
         private int iDClassroom;
         [Key]
         [Column(Order = 1)]
-        public int IDSubejct { get => iDSubejct; set => iDSubejct = value; }
-        [ForeignKey(nameof(IDSubejct))]
+        public int IDSubject { get => iDSubejct; set => iDSubejct = value; }
+        [ForeignKey(nameof(IDSubject))]
 
         public Subject Subject { get; set; }
         [Key]

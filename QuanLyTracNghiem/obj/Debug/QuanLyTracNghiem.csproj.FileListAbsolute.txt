@@ -14,3 +14,6 @@ C:\ProjectOOP\QuanLyTracNghiem\QuanLyTracNghiem\obj\Debug\QuanLyTracNghiem.cspro
 C:\ProjectOOP\QuanLyTracNghiem\QuanLyTracNghiem\obj\Debug\QuanLyTracNghiem.exe
 C:\ProjectOOP\QuanLyTracNghiem\QuanLyTracNghiem\obj\Debug\QuanLyTracNghiem.pdb
 C:\ProjectOOP\QuanLyTracNghiem\QuanLyTracNghiem\obj\Debug\QuanLyTracNghiem.Migrations.dbinit.resources
+C:\ProjectOOP\QuanLyTracNghiem\QuanLyTracNghiem\obj\Debug\QuanLyTracNghiem.Views.FAdmin.resources
+C:\ProjectOOP\QuanLyTracNghiem\QuanLyTracNghiem\obj\Debug\QuanLyTracNghiem.Views.FClassroom.resources
+C:\ProjectOOP\QuanLyTracNghiem\QuanLyTracNghiem\obj\Debug\QuanLyTracNghiem.Migrations.updateNameListSubject.resources

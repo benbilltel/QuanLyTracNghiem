@@ -1,4 +1,8 @@
-﻿using System;
+﻿using QuanLyTracNghiem.Controllers;
+using QuanLyTracNghiem.Helper;
+using QuanLyTracNghiem.Models;
+using QuanLyTracNghiem.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +19,49 @@ namespace QuanLyTracNghiem
         public FLogin()
         {
             InitializeComponent();
+        }
+        ValidationUI validate = new ValidationUI();
+        LoginController loginController = new LoginController();
+        private void btnSignIn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                List<TextBox> textBoxes = new List<TextBox>();
+                textBoxes.Add(txtUsername);
+                textBoxes.Add(txtPassword);
+                validate.CheckEmptyTextBox(textBoxes);
+                validate.CheckLengthTextBox(textBoxes, 6, 20);
+                if (rdAdmin.Checked)
+                {
+                    UserAdmin userAdmin = new UserAdmin();
+                    userAdmin.Username = txtUsername.Text;
+                    userAdmin.Password = txtPassword.Text;
+                    var userLG = loginController.SignInByAdmin(userAdmin);
+                    if (userLG != null)
+                    {
+                        FAdmin fAdmin = new FAdmin();
+                        this.Hide();
+                        fAdmin.ShowDialog();
+                    }
+                    else
+                    {
+                        throw new Exception("Sign in failed!");
+                    }
+                }
+                else
+                {
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void FLogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
