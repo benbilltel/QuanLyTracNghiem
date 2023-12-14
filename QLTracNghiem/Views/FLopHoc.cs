@@ -113,7 +113,10 @@ namespace QLTracNghiem.Views
             {
                 cbDSMH.Items.Add(mh.TenMH);
             }
-            cbDSMH.SelectedIndex = 0;
+            if(cbDSMH.Items.Count > 0)
+            {
+                cbDSMH.SelectedIndex = 0;
+            }
         }
         private void btnRefreshLH_Click(object sender, EventArgs e)
         {

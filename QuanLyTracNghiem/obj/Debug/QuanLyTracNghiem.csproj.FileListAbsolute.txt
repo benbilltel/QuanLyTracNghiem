@@ -1,0 +1,16 @@
+C:\ProjectOOP\QuanLyTracNghiem\QuanLyTracNghiem\bin\Debug\QuanLyTracNghiem.exe.config
+C:\ProjectOOP\QuanLyTracNghiem\QuanLyTracNghiem\bin\Debug\QuanLyTracNghiem.exe
+C:\ProjectOOP\QuanLyTracNghiem\QuanLyTracNghiem\bin\Debug\QuanLyTracNghiem.pdb
+C:\ProjectOOP\QuanLyTracNghiem\QuanLyTracNghiem\bin\Debug\EntityFramework.dll
+C:\ProjectOOP\QuanLyTracNghiem\QuanLyTracNghiem\bin\Debug\EntityFramework.SqlServer.dll
+C:\ProjectOOP\QuanLyTracNghiem\QuanLyTracNghiem\bin\Debug\EntityFramework.xml
+C:\ProjectOOP\QuanLyTracNghiem\QuanLyTracNghiem\bin\Debug\EntityFramework.SqlServer.xml
+C:\ProjectOOP\QuanLyTracNghiem\QuanLyTracNghiem\obj\Debug\QuanLyTracNghiem.csproj.AssemblyReference.cache
+C:\ProjectOOP\QuanLyTracNghiem\QuanLyTracNghiem\obj\Debug\QuanLyTracNghiem.Properties.Resources.resources
+C:\ProjectOOP\QuanLyTracNghiem\QuanLyTracNghiem\obj\Debug\QuanLyTracNghiem.FLogin.resources
+C:\ProjectOOP\QuanLyTracNghiem\QuanLyTracNghiem\obj\Debug\QuanLyTracNghiem.csproj.GenerateResource.cache
+C:\ProjectOOP\QuanLyTracNghiem\QuanLyTracNghiem\obj\Debug\QuanLyTracNghiem.csproj.CoreCompileInputs.cache
+C:\ProjectOOP\QuanLyTracNghiem\QuanLyTracNghiem\obj\Debug\QuanLyTracNghiem.csproj.CopyComplete
+C:\ProjectOOP\QuanLyTracNghiem\QuanLyTracNghiem\obj\Debug\QuanLyTracNghiem.exe
+C:\ProjectOOP\QuanLyTracNghiem\QuanLyTracNghiem\obj\Debug\QuanLyTracNghiem.pdb
+C:\ProjectOOP\QuanLyTracNghiem\QuanLyTracNghiem\obj\Debug\QuanLyTracNghiem.Migrations.dbinit.resources

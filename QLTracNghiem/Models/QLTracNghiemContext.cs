@@ -10,7 +10,7 @@ namespace QLTracNghiem.Models
 {
     public class QLTracNghiemContext : DbContext
     {
-        public QLTracNghiemContext() : base("Data Source=DESKTOP-LTSC8K9\\SQLEXPRESS;Initial Catalog=QLTracNghiem;Integrated Security=True")
+        public QLTracNghiemContext() : base("Data Source=DESKTOP-AC3DQIC\\SQLEXPRESS;Initial Catalog=QLTracNghiem;Persist Security Info=True;User ID=ben;Password=145236987Ben!;Encrypt=False;")
         {
 
         }
