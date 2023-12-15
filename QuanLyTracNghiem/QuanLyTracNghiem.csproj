@@ -58,8 +58,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\ClassroomController.cs" />
+    <Compile Include="Controllers\CompController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MChoiceController.cs" />
+    <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="Controllers\StudentResultController.cs" />
+    <Compile Include="Controllers\SubjectController.cs" />
     <Compile Include="Helper\ValidationUI.cs" />
     <Compile Include="Migrations\202312140323364_dbinit.cs" />
     <Compile Include="Migrations\202312140323364_dbinit.designer.cs">
@@ -68,6 +72,10 @@
     <Compile Include="Migrations\202312141432288_updateNameListSubject.cs" />
     <Compile Include="Migrations\202312141432288_updateNameListSubject.designer.cs">
       <DependentUpon>202312141432288_updateNameListSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202312151521147_updateDateExam.cs" />
+    <Compile Include="Migrations\202312151521147_updateDateExam.designer.cs">
+      <DependentUpon>202312151521147_updateDateExam.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Assignment.cs" />
@@ -94,6 +102,12 @@
     <Compile Include="Views\FClassroom.Designer.cs">
       <DependentUpon>FClassroom.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\FComp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FComp.Designer.cs">
+      <DependentUpon>FComp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\FLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +116,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\FStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FStudent.Designer.cs">
+      <DependentUpon>FStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FStudentResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FStudentResult.Designer.cs">
+      <DependentUpon>FStudentResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FSubject.Designer.cs">
+      <DependentUpon>FSubject.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\FUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202312141432288_updateNameListSubject.resx">
       <DependentUpon>202312141432288_updateNameListSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312151521147_updateDateExam.resx">
+      <DependentUpon>202312151521147_updateDateExam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -129,8 +164,20 @@
     <EmbeddedResource Include="Views\FClassroom.resx">
       <DependentUpon>FClassroom.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\FComp.resx">
+      <DependentUpon>FComp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\FLogin.resx">
       <DependentUpon>FLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FStudent.resx">
+      <DependentUpon>FStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FStudentResult.resx">
+      <DependentUpon>FStudentResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FSubject.resx">
+      <DependentUpon>FSubject.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

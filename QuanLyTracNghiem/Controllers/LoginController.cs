@@ -28,5 +28,24 @@ namespace QuanLyTracNghiem.Controllers
                 throw new Exception("Wrong username!");
             }
         }
+        public UserStudent SignInByStudent (UserStudent student)
+        {
+            var userFound = db.UserStudents.FirstOrDefault(us => us.Username == student.Username);
+            if (userFound != null)
+            {
+                if (userFound.Password == student.Password && userFound.Status == 1)
+                {
+                    return userFound;
+                }
+                else
+                {
+                    throw new Exception("Wrong password!");
+                }
+            }
+            else
+            {
+                throw new Exception("Wrong username!");
+            }
+        }
     }
 }

@@ -330,5 +330,21 @@ namespace QuanLyTracNghiem.Views
             }
             dtgvStudent.Refresh();
         }
+
+        private void dtgvClassroom_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dtgvClassroom.SelectedRows.Count > 0)
+            {
+                DataGridViewRow row = dtgvClassroom.SelectedRows[0];
+                txtIDClass.Text = row.Cells[0].Value.ToString();
+                txtNameClass.Text = row.Cells[1].Value.ToString();
+                Classroom classroom = new Classroom();
+                classroom.ID = int.Parse(row.Cells[0].Value.ToString());
+                classroom.Name = row.Cells[1].Value.ToString();
+                dtgvListSubject.DataSource = classroomController.LoadSubjectsByClass(classroom);
+                bindingSourceStudent.DataSource = classroomController.LoadStudentsByClass(classroom);
+                dtgvStudent.Refresh();
+            }
+        }
     }
 }

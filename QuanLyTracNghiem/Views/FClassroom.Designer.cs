@@ -42,16 +42,16 @@
             this.btnSaveSubjectToList = new System.Windows.Forms.Button();
             this.dtgvStudent = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cbGender = new System.Windows.Forms.ComboBox();
+            this.btnRemoveStudent = new System.Windows.Forms.Button();
             this.btnRefreshStudent = new System.Windows.Forms.Button();
             this.btnSaveStudent = new System.Windows.Forms.Button();
             this.txtIDStudent = new System.Windows.Forms.TextBox();
-            this.txtFirstName = new System.Windows.Forms.TextBox();
-            this.txtLastName = new System.Windows.Forms.TextBox();
-            this.btnRemoveStudent = new System.Windows.Forms.Button();
             this.txtAddress = new System.Windows.Forms.TextBox();
+            this.txtFirstName = new System.Windows.Forms.TextBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
-            this.cbGender = new System.Windows.Forms.ComboBox();
             this.txtSearchStudent = new System.Windows.Forms.TextBox();
+            this.txtLastName = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvClassroom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvListSubject)).BeginInit();
@@ -129,6 +129,7 @@
             this.dtgvClassroom.Size = new System.Drawing.Size(228, 150);
             this.dtgvClassroom.TabIndex = 0;
             this.dtgvClassroom.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvClassroom_CellClick);
+            this.dtgvClassroom.SelectionChanged += new System.EventHandler(this.dtgvClassroom_SelectionChanged);
             // 
             // dtgvListSubject
             // 
@@ -214,6 +215,27 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Student";
             // 
+            // cbGender
+            // 
+            this.cbGender.FormattingEnabled = true;
+            this.cbGender.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.cbGender.Location = new System.Drawing.Point(247, 56);
+            this.cbGender.Name = "cbGender";
+            this.cbGender.Size = new System.Drawing.Size(77, 21);
+            this.cbGender.TabIndex = 3;
+            // 
+            // btnRemoveStudent
+            // 
+            this.btnRemoveStudent.Location = new System.Drawing.Point(549, 58);
+            this.btnRemoveStudent.Name = "btnRemoveStudent";
+            this.btnRemoveStudent.Size = new System.Drawing.Size(75, 23);
+            this.btnRemoveStudent.TabIndex = 2;
+            this.btnRemoveStudent.Text = "Remove";
+            this.btnRemoveStudent.UseVisualStyleBackColor = true;
+            this.btnRemoveStudent.Click += new System.EventHandler(this.btnRemoveStudent_Click);
+            // 
             // btnRefreshStudent
             // 
             this.btnRefreshStudent.Location = new System.Drawing.Point(549, 93);
@@ -242,36 +264,19 @@
             this.txtIDStudent.Size = new System.Drawing.Size(100, 20);
             this.txtIDStudent.TabIndex = 0;
             // 
-            // txtFirstName
-            // 
-            this.txtFirstName.Location = new System.Drawing.Point(6, 57);
-            this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(100, 20);
-            this.txtFirstName.TabIndex = 0;
-            // 
-            // txtLastName
-            // 
-            this.txtLastName.Location = new System.Drawing.Point(127, 56);
-            this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(100, 20);
-            this.txtLastName.TabIndex = 0;
-            // 
-            // btnRemoveStudent
-            // 
-            this.btnRemoveStudent.Location = new System.Drawing.Point(549, 58);
-            this.btnRemoveStudent.Name = "btnRemoveStudent";
-            this.btnRemoveStudent.Size = new System.Drawing.Size(75, 23);
-            this.btnRemoveStudent.TabIndex = 2;
-            this.btnRemoveStudent.Text = "Remove";
-            this.btnRemoveStudent.UseVisualStyleBackColor = true;
-            this.btnRemoveStudent.Click += new System.EventHandler(this.btnRemoveStudent_Click);
-            // 
             // txtAddress
             // 
             this.txtAddress.Location = new System.Drawing.Point(6, 95);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(100, 20);
             this.txtAddress.TabIndex = 0;
+            // 
+            // txtFirstName
+            // 
+            this.txtFirstName.Location = new System.Drawing.Point(6, 57);
+            this.txtFirstName.Name = "txtFirstName";
+            this.txtFirstName.Size = new System.Drawing.Size(100, 20);
+            this.txtFirstName.TabIndex = 0;
             // 
             // txtPhone
             // 
@@ -280,17 +285,6 @@
             this.txtPhone.Size = new System.Drawing.Size(100, 20);
             this.txtPhone.TabIndex = 0;
             // 
-            // cbGender
-            // 
-            this.cbGender.FormattingEnabled = true;
-            this.cbGender.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.cbGender.Location = new System.Drawing.Point(247, 56);
-            this.cbGender.Name = "cbGender";
-            this.cbGender.Size = new System.Drawing.Size(77, 21);
-            this.cbGender.TabIndex = 3;
-            // 
             // txtSearchStudent
             // 
             this.txtSearchStudent.Location = new System.Drawing.Point(127, 19);
@@ -298,6 +292,13 @@
             this.txtSearchStudent.Size = new System.Drawing.Size(100, 20);
             this.txtSearchStudent.TabIndex = 0;
             this.txtSearchStudent.TextChanged += new System.EventHandler(this.txtSearchStudent_TextChanged);
+            // 
+            // txtLastName
+            // 
+            this.txtLastName.Location = new System.Drawing.Point(127, 56);
+            this.txtLastName.Name = "txtLastName";
+            this.txtLastName.Size = new System.Drawing.Size(100, 20);
+            this.txtLastName.TabIndex = 0;
             // 
             // FClassroom
             // 

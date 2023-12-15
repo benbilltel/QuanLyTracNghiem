@@ -37,5 +37,22 @@ namespace QuanLyTracNghiem.Views
             FLogin fLogin = new FLogin();
             fLogin.Show();
         }
+
+        private void btnSubject_Click(object sender, EventArgs e)
+        {
+            FSubject fSubject = new FSubject();
+            this.Hide();
+            fSubject.Show();
+        }
+
+        private void btnResult_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

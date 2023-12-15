@@ -13,14 +13,14 @@ namespace QuanLyTracNghiem.Models
     {
         public Exam() { }
         private int iD;
-        private string name;
+        private DateTime dateTake;
         private int iDSubject;
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get => iD; set => iD = value; }
-        [Required, MaxLength(20), MinLength(3)]
-        public string Name { get => name; set => name = value; }
+        
+        public DateTime DateTake { get => dateTake; set => dateTake = value; }
         public int IDSubject { get => iDSubject; set => iDSubject = value; }
         [ForeignKey(nameof(IDSubject))]
         public Subject Subject { get; set; }

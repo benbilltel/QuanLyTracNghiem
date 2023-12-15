@@ -50,7 +50,20 @@ namespace QuanLyTracNghiem
                 }
                 else
                 {
-
+                    UserStudent userStudent = new UserStudent();
+                    userStudent.Username = txtUsername.Text;
+                    userStudent.Password = txtPassword.Text;
+                    var userLG = loginController.SignInByStudent(userStudent);
+                    if (userLG != null)
+                    {
+                        FStudent fStudent = new FStudent(userLG);
+                        this.Hide();
+                        fStudent.ShowDialog();
+                    }
+                    else
+                    {
+                        throw new Exception("Sign in failed!");
+                    }
                 }
             }
             catch (Exception ex)

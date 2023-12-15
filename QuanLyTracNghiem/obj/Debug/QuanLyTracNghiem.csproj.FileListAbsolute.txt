@@ -17,3 +17,8 @@ C:\ProjectOOP\QuanLyTracNghiem\QuanLyTracNghiem\obj\Debug\QuanLyTracNghiem.Migra
 C:\ProjectOOP\QuanLyTracNghiem\QuanLyTracNghiem\obj\Debug\QuanLyTracNghiem.Views.FAdmin.resources
 C:\ProjectOOP\QuanLyTracNghiem\QuanLyTracNghiem\obj\Debug\QuanLyTracNghiem.Views.FClassroom.resources
 C:\ProjectOOP\QuanLyTracNghiem\QuanLyTracNghiem\obj\Debug\QuanLyTracNghiem.Migrations.updateNameListSubject.resources
+C:\ProjectOOP\QuanLyTracNghiem\QuanLyTracNghiem\obj\Debug\QuanLyTracNghiem.Views.FSubject.resources
+C:\ProjectOOP\QuanLyTracNghiem\QuanLyTracNghiem\obj\Debug\QuanLyTracNghiem.Views.FStudent.resources
+C:\ProjectOOP\QuanLyTracNghiem\QuanLyTracNghiem\obj\Debug\QuanLyTracNghiem.Views.FComp.resources
+C:\ProjectOOP\QuanLyTracNghiem\QuanLyTracNghiem\obj\Debug\QuanLyTracNghiem.Migrations.updateDateExam.resources
+C:\ProjectOOP\QuanLyTracNghiem\QuanLyTracNghiem\obj\Debug\QuanLyTracNghiem.Views.FStudentResult.resources
