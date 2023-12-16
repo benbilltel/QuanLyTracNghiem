@@ -38,12 +38,13 @@
             this.btnNext = new System.Windows.Forms.Button();
             this.cbQuestion = new System.Windows.Forms.ComboBox();
             this.rdUnLocked = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblQuestion
             // 
             this.lblQuestion.AutoSize = true;
-            this.lblQuestion.Location = new System.Drawing.Point(56, 49);
+            this.lblQuestion.Location = new System.Drawing.Point(56, 44);
             this.lblQuestion.Name = "lblQuestion";
             this.lblQuestion.Size = new System.Drawing.Size(47, 13);
             this.lblQuestion.TabIndex = 0;
@@ -63,7 +64,7 @@
             // rdB
             // 
             this.rdB.AutoSize = true;
-            this.rdB.Location = new System.Drawing.Point(286, 153);
+            this.rdB.Location = new System.Drawing.Point(456, 153);
             this.rdB.Name = "rdB";
             this.rdB.Size = new System.Drawing.Size(32, 17);
             this.rdB.TabIndex = 1;
@@ -85,7 +86,7 @@
             // rdD
             // 
             this.rdD.AutoSize = true;
-            this.rdD.Location = new System.Drawing.Point(286, 248);
+            this.rdD.Location = new System.Drawing.Point(456, 248);
             this.rdD.Name = "rdD";
             this.rdD.Size = new System.Drawing.Size(33, 17);
             this.rdD.TabIndex = 1;
@@ -95,38 +96,43 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(695, 23);
+            this.btnSubmit.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.ForeColor = System.Drawing.Color.White;
+            this.btnSubmit.Location = new System.Drawing.Point(698, 387);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(75, 23);
+            this.btnSubmit.Size = new System.Drawing.Size(121, 51);
             this.btnSubmit.TabIndex = 3;
             this.btnSubmit.Text = "Submit";
-            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // btnPrev
             // 
-            this.btnPrev.Location = new System.Drawing.Point(98, 387);
+            this.btnPrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrev.Location = new System.Drawing.Point(335, 387);
             this.btnPrev.Name = "btnPrev";
-            this.btnPrev.Size = new System.Drawing.Size(75, 23);
+            this.btnPrev.Size = new System.Drawing.Size(66, 23);
             this.btnPrev.TabIndex = 4;
-            this.btnPrev.Text = "<";
+            this.btnPrev.Text = "<-";
             this.btnPrev.UseVisualStyleBackColor = true;
             this.btnPrev.Click += new System.EventHandler(this.btnPrev_Click);
             // 
             // btnNext
             // 
-            this.btnNext.Location = new System.Drawing.Point(276, 387);
+            this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext.Location = new System.Drawing.Point(456, 387);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(75, 23);
+            this.btnNext.Size = new System.Drawing.Size(66, 23);
             this.btnNext.TabIndex = 5;
-            this.btnNext.Text = ">";
+            this.btnNext.Text = "->";
             this.btnNext.UseVisualStyleBackColor = true;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // cbQuestion
             // 
             this.cbQuestion.FormattingEnabled = true;
-            this.cbQuestion.Location = new System.Drawing.Point(583, 153);
+            this.cbQuestion.Location = new System.Drawing.Point(698, 44);
             this.cbQuestion.Name = "cbQuestion";
             this.cbQuestion.Size = new System.Drawing.Size(121, 21);
             this.cbQuestion.TabIndex = 6;
@@ -135,7 +141,7 @@
             // rdUnLocked
             // 
             this.rdUnLocked.AutoSize = true;
-            this.rdUnLocked.Location = new System.Drawing.Point(70, 23);
+            this.rdUnLocked.Location = new System.Drawing.Point(59, 12);
             this.rdUnLocked.Name = "rdUnLocked";
             this.rdUnLocked.Size = new System.Drawing.Size(57, 17);
             this.rdUnLocked.TabIndex = 7;
@@ -144,11 +150,23 @@
             this.rdUnLocked.UseVisualStyleBackColor = true;
             this.rdUnLocked.Visible = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(695, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 16);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Question:";
+            // 
             // FComp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(913, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.rdUnLocked);
             this.Controls.Add(this.cbQuestion);
             this.Controls.Add(this.btnNext);
@@ -180,5 +198,6 @@
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.ComboBox cbQuestion;
         private System.Windows.Forms.RadioButton rdUnLocked;
+        private System.Windows.Forms.Label label1;
     }
 }
