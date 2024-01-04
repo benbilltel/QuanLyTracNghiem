@@ -8,4 +8,5 @@ a. Clone or download the project from the repository.
 b. Open the solution file in Visual Studio.
 c. Restore NuGet packages
 d. Modify Connection String in app.config
-e. Build and Run
+e. Open Package Manager Console and type "Update-database"
+f. Build and Run
